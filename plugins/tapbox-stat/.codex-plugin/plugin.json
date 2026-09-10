@@ -1,6 +1,6 @@
 {
   "name": "tapbox-stat",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "MAX channel, chat and bot analytics through the Tapbox Stat MCP server.",
   "author": {
     "name": "Tapbox",

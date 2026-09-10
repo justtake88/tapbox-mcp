@@ -1,7 +1,7 @@
 {
   "name": "tapbox",
   "description": "Плагины Tapbox Стат: аналитика каналов, чатов и ботов мессенджера MAX.",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "owner": {
     "name": "Tapbox",
     "url": "https://tapbox.ru"
@@ -11,7 +11,7 @@
       "name": "tapbox-stat",
       "source": "./plugins/tapbox-stat",
       "description": "MCP-сервер Tapbox Стат: подбор каналов MAX, метрики, поиск по публикациям, упоминания, индекс цитирования и каталог ботов.",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "author": {
         "name": "Tapbox",
         "url": "https://tapbox.ru"
