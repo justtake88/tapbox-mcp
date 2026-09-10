@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "tapbox-stat",
+  "displayName": "Tapbox Стат MCP",
+  "version": "1.0.0",
+  "description": "Аналитика каналов, чатов и ботов MAX от Tapbox Стат: подбор площадок, метрики, поиск по публикациям, упоминания и индекс цитирования.",
+  "author": {
+    "name": "Tapbox",
+    "url": "https://tapbox.ru"
+  },
+  "homepage": "https://beta.stat.tapbox.ru/mcp",
+  "license": "MIT",
+  "keywords": [
+    "max",
+    "analytics",
+    "channels",
+    "bots",
+    "mcp",
+    "tapbox"
+  ],
+  "skills": "./skills/",
+  "userConfig": {
+    "api_key": {
+      "type": "string",
+      "title": "Ключ Tapbox Стат",
+      "description": "API-ключ вида tbx_… Ключи, выданные на ваш аккаунт, видны в профиле beta.stat.tapbox.ru/my/profile.",
+      "sensitive": true,
+      "required": true
+    }
+  },
+  "mcpServers": {
+    "tapbox": {
+      "type": "http",
+      "url": "https://beta.stat.tapbox.ru/api/mcp",
+      "headers": {
+        "Authorization": "Bearer ${user_config.api_key}"
+      }
+    }
+  }
+}

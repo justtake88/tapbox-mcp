@@ -1,0 +1,22 @@
+{
+  "name": "tapbox-mcp",
+  "version": "1.0.0",
+  "description": "Аналитика каналов, чатов и ботов MAX от Tapbox Стат.",
+  "settings": [
+    {
+      "name": "Ключ Tapbox Стат",
+      "description": "API-ключ вида tbx_… Ключи, выданные на ваш аккаунт, видны в профиле beta.stat.tapbox.ru/my/profile.",
+      "envVar": "TAPBOX_API_TOKEN",
+      "sensitive": true
+    }
+  ],
+  "mcpServers": {
+    "tapbox": {
+      "httpUrl": "https://beta.stat.tapbox.ru/api/mcp",
+      "headers": {
+        "Authorization": "Bearer ${TAPBOX_API_TOKEN}"
+      }
+    }
+  },
+  "contextFileName": "GEMINI.md"
+}

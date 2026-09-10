@@ -1,0 +1,37 @@
+{
+  "name": "tapbox-stat",
+  "version": "1.0.0",
+  "description": "MAX channel, chat and bot analytics through the Tapbox Stat MCP server.",
+  "author": {
+    "name": "Tapbox",
+    "url": "https://tapbox.ru"
+  },
+  "homepage": "https://beta.stat.tapbox.ru/mcp",
+  "license": "MIT",
+  "keywords": [
+    "max",
+    "analytics",
+    "channels",
+    "bots",
+    "mcp",
+    "tapbox"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Tapbox Стат MCP",
+    "shortDescription": "Аналитика каналов, чатов и ботов MAX",
+    "longDescription": "Подключает MCP-сервер Tapbox Стат к Codex: подбор каналов MAX, метрики и динамика, полнотекстовый поиск по публикациям, упоминания, индекс цитирования и каталог ботов.",
+    "developerName": "Tapbox",
+    "category": "Productivity",
+    "capabilities": [],
+    "websiteURL": "https://beta.stat.tapbox.ru/mcp",
+    "privacyPolicyURL": "https://beta.stat.tapbox.ru/privacy",
+    "defaultPrompt": [
+      "Подбери 10 каналов MAX про финансы от 20 тысяч подписчиков с лучшим ERR.",
+      "Разбери канал newmedia: рост подписчиков, лучшие посты за месяц и кто его цитирует.",
+      "Где за последнюю неделю упоминали наш бренд? Сгруппируй по каналам."
+    ],
+    "brandColor": "#6C5CE7"
+  },
+  "mcpServers": "./codex.mcp.json"
+}

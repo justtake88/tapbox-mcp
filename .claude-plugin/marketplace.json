@@ -1,0 +1,32 @@
+{
+  "name": "tapbox",
+  "description": "Плагины Tapbox Стат: аналитика каналов, чатов и ботов мессенджера MAX.",
+  "version": "1.0.0",
+  "owner": {
+    "name": "Tapbox",
+    "url": "https://tapbox.ru"
+  },
+  "plugins": [
+    {
+      "name": "tapbox-stat",
+      "source": "./plugins/tapbox-stat",
+      "description": "MCP-сервер Tapbox Стат: подбор каналов MAX, метрики, поиск по публикациям, упоминания, индекс цитирования и каталог ботов.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Tapbox",
+        "url": "https://tapbox.ru"
+      },
+      "homepage": "https://beta.stat.tapbox.ru/mcp",
+      "license": "MIT",
+      "keywords": [
+        "max",
+        "analytics",
+        "channels",
+        "bots",
+        "mcp",
+        "tapbox"
+      ],
+      "category": "data"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "name": "tapbox",
+  "interface": {
+    "displayName": "Tapbox"
+  },
+  "plugins": [
+    {
+      "name": "tapbox-stat",
+      "source": {
+        "source": "local",
+        "path": "./plugins/tapbox-stat"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

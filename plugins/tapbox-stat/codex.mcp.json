@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "tapbox": {
+      "type": "http",
+      "url": "https://beta.stat.tapbox.ru/api/mcp",
+      "headers": {
+        "Authorization": "Bearer ${TAPBOX_API_TOKEN}"
+      }
+    }
+  }
+}
