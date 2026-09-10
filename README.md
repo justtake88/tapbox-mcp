@@ -135,10 +135,10 @@ bearer_token_env_var = "TAPBOX_API_TOKEN"
 
 ## Проверка
 
-Зависимостей и шага сборки нет. После изменений запустите:
+Нужен только Go 1.22 или новее, внешних зависимостей нет. После изменений запустите:
 
 ```bash
-python3 scripts/validate.py
+go run ./cmd/validate
 claude plugin validate .
 ```
 
