@@ -15,9 +15,10 @@ const mcpURL = "https://beta.stat.tapbox.ru/api/mcp"
 const pluginDir = "plugins/tapbox-stat"
 
 type server struct {
-	URL     string            `json:"url"`
-	HTTPURL string            `json:"httpUrl"`
-	Headers map[string]string `json:"headers"`
+	URL               string            `json:"url"`
+	HTTPURL           string            `json:"httpUrl"`
+	Headers           map[string]string `json:"headers"`
+	BearerTokenEnvVar string            `json:"bearer_token_env_var"`
 }
 
 type marketplace struct {
@@ -157,8 +158,11 @@ func main() {
 	if okCodex && codex.MCPServers != "" {
 		var f mcpFile
 		if load(root, filepath.Join(pluginDir, codex.MCPServers), &f) {
-			for _, s := range f.MCPServers {
+			for name, s := range f.MCPServers {
 				urls = append(urls, s.URL)
+				if s.BearerTokenEnvVar == "" {
+					fail("%s: у сервера %s нет bearer_token_env_var — Codex не передаст ключ", codex.MCPServers, name)
+				}
 			}
 		}
 	}

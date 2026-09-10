@@ -3,9 +3,7 @@
     "tapbox": {
       "type": "http",
       "url": "https://beta.stat.tapbox.ru/api/mcp",
-      "headers": {
-        "Authorization": "Bearer ${TAPBOX_API_TOKEN}"
-      }
+      "bearer_token_env_var": "TAPBOX_API_TOKEN"
     }
   }
 }
