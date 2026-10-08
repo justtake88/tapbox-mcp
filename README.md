@@ -2,7 +2,7 @@
 
 Официальный плагин Tapbox Стат для подключения ИИ-агентов к аналитике мессенджера MAX: каналы, чаты, публикации и боты.
 
-MCP-сервер работает по адресу `https://beta.stat.tapbox.ru/api/mcp` (Streamable HTTP, JSON-RPC 2.0). В этом репозитории только манифесты плагинов, настройки подключения, навык для агента и документация. Сервер и данные остаются в инфраструктуре Tapbox.
+MCP-сервер работает по адресу `https://stat.tapbox.ru/api/mcp` (Streamable HTTP, JSON-RPC 2.0). В этом репозитории только манифесты плагинов, настройки подключения, навык для агента и документация. Сервер и данные остаются в инфраструктуре Tapbox.
 
 ## Что умеет
 
@@ -18,7 +18,7 @@ MCP-сервер работает по адресу `https://beta.stat.tapbox.ru
 
 ## Ключ
 
-Для работы нужен API-ключ вида `tbx_…`. Ключи выдаёт команда Tapbox Стат. Выданные на ваш аккаунт ключи, их лимиты и расход видны в профиле: [beta.stat.tapbox.ru/my/profile](https://beta.stat.tapbox.ru/my/profile).
+Для работы нужен API-ключ вида `tbx_…`. Ключи выдаёт команда Tapbox Стат. Выданные на ваш аккаунт ключи, их лимиты и расход видны в профиле: [stat.tapbox.ru/my/profile](https://stat.tapbox.ru/my/profile).
 
 Для подключения через claude.ai ключ должен быть привязан к вашему аккаунту MAX. Запрашивая ключ под claude.ai, пришлите свой MAX ID — он есть в профиле, в блоке «Настройки», строка «Мой MAX ID».
 
@@ -31,7 +31,7 @@ MCP-сервер работает по адресу `https://beta.stat.tapbox.ru
 Плагин не нужен: сервер подключается как коннектор, и ключ вводить не надо.
 
 1. В claude.ai откройте **Настройки → Коннекторы** и нажмите **Добавить свой коннектор**.
-2. Название — «Tapbox Стат», адрес — `https://beta.stat.tapbox.ru/api/mcp`. Дополнительные настройки оставьте пустыми.
+2. Название — «Tapbox Стат», адрес — `https://stat.tapbox.ru/api/mcp`. Дополнительные настройки оставьте пустыми.
 3. Нажмите **Подключить**. Откроется страница Tapbox Стат: войдите через MAX, выберите ключ и нажмите **Разрешить доступ**.
 
 Коннектор работает и в Claude Desktop, и в мобильном приложении Claude. Свои коннекторы в claude.ai можно добавлять только с платной подпиской Claude — это подписка на сам Claude, а не тариф Tapbox. Приложение получает отдельный токен, а не сам ключ; отключить его можно в профиле, в разделе «Подключённые приложения».
@@ -103,7 +103,7 @@ Gemini спросит «Ключ Tapbox Стат» как чувствитель
 Claude Code одной командой:
 
 ```bash
-claude mcp add --transport http tapbox https://beta.stat.tapbox.ru/api/mcp \
+claude mcp add --transport http tapbox https://stat.tapbox.ru/api/mcp \
   --header "Authorization: Bearer tbx_..."
 ```
 
@@ -111,7 +111,7 @@ Codex, файл `~/.codex/config.toml`:
 
 ```toml
 [mcp_servers.tapbox]
-url = "https://beta.stat.tapbox.ru/api/mcp"
+url = "https://stat.tapbox.ru/api/mcp"
 bearer_token_env_var = "TAPBOX_API_TOKEN"
 ```
 
@@ -122,7 +122,7 @@ bearer_token_env_var = "TAPBOX_API_TOKEN"
   "mcpServers": {
     "tapbox": {
       "type": "http",
-      "url": "https://beta.stat.tapbox.ru/api/mcp",
+      "url": "https://stat.tapbox.ru/api/mcp",
       "headers": {
         "Authorization": "Bearer tbx_..."
       }
@@ -173,7 +173,7 @@ go run ./cmd/validate
 claude plugin validate .
 ```
 
-Подробности и готовые сниппеты для других клиентов — на [beta.stat.tapbox.ru/mcp](https://beta.stat.tapbox.ru/mcp).
+Подробности и готовые сниппеты для других клиентов — на [stat.tapbox.ru/mcp](https://stat.tapbox.ru/mcp).
 
 ## Лицензия
 

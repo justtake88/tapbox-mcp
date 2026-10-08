@@ -8,7 +8,7 @@
     "name": "Tapbox",
     "url": "https://tapbox.ru"
   },
-  "homepage": "https://beta.stat.tapbox.ru/mcp",
+  "homepage": "https://stat.tapbox.ru/mcp",
   "license": "MIT",
   "keywords": [
     "max",
@@ -24,7 +24,7 @@
     "api_key": {
       "type": "string",
       "title": "Ключ Tapbox Стат",
-      "description": "API-ключ вида tbx_… Ключи, выданные на ваш аккаунт, видны в профиле beta.stat.tapbox.ru/my/profile.",
+      "description": "API-ключ вида tbx_… Ключи, выданные на ваш аккаунт, видны в профиле stat.tapbox.ru/my/profile.",
       "sensitive": true,
       "required": true
     }
@@ -32,7 +32,7 @@
   "mcpServers": {
     "tapbox": {
       "type": "http",
-      "url": "https://beta.stat.tapbox.ru/api/mcp",
+      "url": "https://stat.tapbox.ru/api/mcp",
       "headers": {
         "Authorization": "Bearer ${user_config.api_key}"
       }

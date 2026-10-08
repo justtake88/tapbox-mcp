@@ -2,7 +2,7 @@
   "mcpServers": {
     "tapbox": {
       "type": "http",
-      "url": "https://beta.stat.tapbox.ru/api/mcp",
+      "url": "https://stat.tapbox.ru/api/mcp",
       "bearer_token_env_var": "TAPBOX_API_TOKEN"
     }
   }

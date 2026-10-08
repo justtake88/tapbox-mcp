@@ -10,7 +10,7 @@ import (
 	"strings"
 )
 
-const mcpURL = "https://beta.stat.tapbox.ru/api/mcp"
+const mcpURL = "https://stat.tapbox.ru/api/mcp"
 
 const pluginDir = "plugins/tapbox-stat"
 
